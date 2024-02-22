@@ -7,4 +7,6 @@ $(document).ready(function(){
     logo.click(function(){
         intro.toggle();
     })
+
+    let leonardo = "facilitatore"
 })
