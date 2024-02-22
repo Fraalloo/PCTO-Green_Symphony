@@ -1,4 +1,2 @@
-# RUOLI
-Circuito: Gallo, Pompilio,
-Modello 3D: Scaramuzzi A., Di Tullo,
-Sito: Marzano,
+  # LAVORO PCTO
+Start-up Green Symphony
