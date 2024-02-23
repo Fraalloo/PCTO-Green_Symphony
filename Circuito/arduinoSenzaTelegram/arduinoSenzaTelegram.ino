@@ -1,18 +1,20 @@
 #include <LiquidCrystal.h>
-#include <LiquidCrystal_I2C.h>
 #include <DHT.h>
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 const int DHTPin = 7;
-//const int POT = A0;
-const int FRS = A1;
+const int FRS1 = A0;
+const int FRS2 = A1;
+const int FRS3 = A2;
 const int DHTTYPE = DHT11;
 
 DHT dht = DHT(DHTPin, DHTTYPE);
 
 int umid;
-int lux;
+int lux1;
+int lux2;
+int lux3;
 int temp;
 
 float percentualeLux;
@@ -25,10 +27,12 @@ void setup(){
 
 void loop(){
   umid = dht.readHumidity();
-  lux = analogRead(FRS);
+  lux1 = analogRead(FRS1);
+  lux2 = analogRead(FRS2);
+  lux3 = analogRead(FRS3);
   temp = dht.readTemperature();
 
-  percentualeLux = map(lux, 0, 1023, 0, 100);
+  percentualeLux = (map(lux1, 0, 1023, 0, 100) + map(lux2, 0, 1023, 0, 100) + map(lux3, 0, 1023, 0, 100))/3;
 
   if(Serial.available()){
     String inputString = "";
