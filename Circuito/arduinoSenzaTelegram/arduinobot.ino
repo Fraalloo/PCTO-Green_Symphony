@@ -1,8 +1,8 @@
 #include <LiquidCrystal.h>
 #include <DHT.h>
-#include<SPI.h>
-#include<WiFiNINA.h>
-#include<TelegramBot.h>
+#include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include <UniversalTelegramBot.h>
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
@@ -22,39 +22,35 @@ int temp;
 
 float percentualeLux;
 
-char ssid[]="nomewifi";
-char pass[]="pass";//password del wifi
+const char* ssid = "ap-react";
+const char* token = "6196944314:AAHuMxSecHvxWMdwApU7p_KGkGGiu1E-hKM";
+const int httpsPort = 443;
+const char* host = "api.telegram.org";
 
-int status=WL_IDLE_STATUS;
-WiFiSSLClient client;
+WiFiClientSecure client;
+UniversalTelegramBot bot(token, client);
 
-const char* BotToken="/inserire token di arduino/";
-TelegramBot bot(BotToken, client);
+WiFiServer server(80);
 
 void setup(){
-  Serial.begin(9600);
+  Serial.begin(115200);
   lcd.begin(16, 2);
   dht.begin();
-  Serial.begin(9600);
-    while(!Serial){
-        ;
-    }
-    if(WiFi.status()==WL_NOMODULE){//trova il modulo Wifi
-        Serial.printfln("Communication with WiFi module failed");
+  
+  delay(100);
 
-        while(true);
-    }
-    while(status!=WL_CONNECTED){
-        Serial.print("Attempting to connect to SSID: ");
-        Serial.println(ssid);
+  WiFi.begin(ssid);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connessione alla rete WiFi...");
+  }
+  Serial.println("Connesso alla rete WiFi");
 
-        status=WiFi.begin(ssid, pass);
+  client.setCACert(TELEGRAM_CERTIFICATE_ROOT);
 
-        delay(2000);
-    }
-    Serial.println("Connected to WiFi");
-    bot.begin();
-    Serial.println("Bot started");
+  server.begin();
+
+  delay(1000);
 }
 
 void loop(){
@@ -65,10 +61,37 @@ void loop(){
   temp = dht.readTemperature();
 
   percentualeLux = (map(lux1, 0, 1023, 0, 100) + map(lux2, 0, 1023, 0, 100) + map(lux3, 0, 1023, 0, 100))/3;
+
+  WiFiClient client = server.available();
+  if (client) {
+    Serial.println("Nuova connessione!");
+    String currentLine = "";
+    while (client.connected()) {
+      if (client.available()) {
+        char c = client.read();
+        Serial.write(c);
+        if (c == '\n') {
+          if (currentLine.length() == 0) {
+            client.println("HTTP/1.1 200 OK");
+            client.println("Content-type:text/html");
+            client.println();
+            client.println("<html><body><h1>Richiesta ricevuta!</h1></body></html>");
+            break;
+          } else {
+            currentLine = "";
+          }
+        } else if (c != '\r') {
+          currentLine += c;
+        }
+      }
+    }
+    client.stop();
+    Serial.println("Connessione chiusa!");
+  }
   
     message m=bot.getUpdates();//vede se ci sono nuovi messaggi
     if(m.chat_id != 0){
-        Serial-println(m.text);
+        Serial.println(m.text);
         String msg=String(m.text);
         if(msg=="/read"){
             Serial.print("Umidita del terreno: ");
