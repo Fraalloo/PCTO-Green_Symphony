@@ -22,7 +22,7 @@ int temp;
 
 float percentualeLux;
 
-const char* ssid = "ap-react";
+const char* ssid = "AP-REACT";
 const char* token = "6196944314:AAHuMxSecHvxWMdwApU7p_KGkGGiu1E-hKM";
 const int httpsPort = 443;
 const char* host = "api.telegram.org";
