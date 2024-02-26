@@ -530,7 +530,7 @@ body{
     width: 30px;
     display: block;
     position: absolute;
-    right: 0;
+    margin: auto;
     top: 10px;
     font-size: 30px;
     color: white;
@@ -542,7 +542,7 @@ body{
 .lightbox .lightbox-caption{
     height: 20vh;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     position: absolute;
     left: 0;
