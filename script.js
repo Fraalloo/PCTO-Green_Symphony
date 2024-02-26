@@ -79,13 +79,24 @@ $(document).ready(function(){
             "Il Tech Flora fdt1 ti permette di sviluppare da solo il tuo vaso tecnologico e a casa arriveranno i componenti e un libricino illustrativo, per aiutarti nel processo.",
             "Nuovi prodotti arriveranno prossimamente."
         ]
+        let prize = [
+            "59,99$",
+            "34,99$",
+            ""
+        ]
         let imgSrc = $(".service-item").eq(index).find("img").attr("data-large")
         let category = $(".service-item").eq(index).find("h3").html()
         $(".lightbox-img").attr("src", imgSrc)
         $(".lightbox-category").html(category)
+        if(prize[index] === ""){
+            $(".lightbox-buy").css("display","none")
+        }else{
+            $(".lightbox-buy").css("display","flex")
+            $(".lightbox-buy").html(prize[index])
+        }
         $(".lightbox-description").html(desc[index])
         $(".lightbox-counter p").html((index + 1)+ "/" + totalItems)
-    }// Il Tech Flora v1 ti aiuta a tenere sotto controllo la tua pianta, misurando l'umidità, luminosità e temperatura e tutto questo da remoto 
+    }
 
     // Dialog
     $("#button").click(function(){
@@ -96,6 +107,11 @@ $(document).ready(function(){
         closeOnEscape: false,
         modal: true,
         autoOpen: false
+    })
+
+    // Buy
+    $(".lightbox-buy").click(function(){
+        alert("Grazie per aver acquistato un nostro prodotto!")
     })
 
     // Recensioni
