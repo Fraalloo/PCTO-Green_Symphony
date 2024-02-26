@@ -816,6 +816,7 @@ body{
         font-size: 15px;
         color: white;
         margin: 0;
+        visibility: hidden;
     }
     .home-section .home-content h2,
     .home-section .home-content h4{
