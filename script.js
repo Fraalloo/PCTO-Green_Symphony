@@ -19,7 +19,7 @@ $(document).ready(function(){
     })
 
     // Scroll
-    $("li a").on("click",function(event){
+    $(".scrl").on("click",function(event){
         if($(this).hash !== ""){
             event.preventDefault()
             let hash = this.hash
