@@ -91,39 +91,6 @@ body{
 
 /* Generale */
 
-/* Preloader */
-
-.preloader{
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #111;
-    z-index: 1099;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.6s ease;
-}
-
-.preloader .loaded{
-    visibility: hidden;
-    opacity: 0;
-    z-index: -99;   
-}
-
-.preloader .loader{
-    height: 30px;
-    width: 30px;
-    border: 2px solid #ff9800;
-    border-right: 2px solid transparent;
-    border-radius: 50%;
-    animation: rot 2s linear infinite;
-}
-
-/* Preloader */
-
 /* Header */
 
 .header{
