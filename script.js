@@ -1,11 +1,6 @@
 $(document).ready(function(){
     Ae()
-
-    // Preload
-    $(window).on("load",function(){
-        $(".preloader").css("visibility","hidden")
-    })
-
+    
     // Toggle
     $(".nav-toggle").click(function(){
         $(".header .nav").slideToggle()
