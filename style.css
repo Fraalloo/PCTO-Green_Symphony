@@ -541,6 +541,13 @@ body{
     align-items: center;
 }
 
+.lightbox .lightbox-caption .lightbox-buy{
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .lightbox .lightbox-controls .prev,
 .lightbox .lightbox-controls .next{
     position: absolute;
@@ -811,8 +818,13 @@ body{
     .home-section .home-content h2{
         font-size: 40px;
     }
+    .home-section .home-content{
+        z-index: 4;
+    }
+    h4{
+        z-index: 1;
+    }
     .home-section .home-content h4{
-        z-index: 3;
         font-size: 15px;
         color: white;
         margin: 0;
