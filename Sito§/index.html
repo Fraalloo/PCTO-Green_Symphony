@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="IMG/favicon.png">
+
+        <!-- Titolo della pagina -->
+        <title>Green Symphony</title>
+
+        <!-- Link di CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Link del font Fredoka -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+        <!-- Link di jQuery -->
+        <script src="lib/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/color/jquery.color-2.2.0.js" integrity="sha256-gvMJWDHjgDrVSiN6eBI9h7dRfQmsTTsGU/eTT8vpzNg=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="lib/jquery-ui-1.13.2/jquery-ui.css">
+        <link rel="stylesheet" href="lib/jquery-ui-1.13.2/jquery-ui.structure.css">
+        <link rel="stylesheet" href="lib/jquery-ui-1.13.2/jquery-ui.theme.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- Link di Three -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+        <!-- Link di lib.js -->
+        <script src="lib/lib.js"></script>
+
+        <!-- Link dello script principale -->
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- Preloader 1 37 52-->
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+        <!-- Preloader -->
+
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="brand-name">
+                        <a href="index.html">Green Symphony</a>
+                    </div>
+                    <div class="nav-toggle">
+                        <span></span>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#articoli">Articoli</a></li>
+                            <li><a href="#chi-siamo">Chi Siamo</a></li>
+                            <li><a href="#contatti">Contatti</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Header -->
+
+        <!-- Home -->
+        <section class="home-section" id="home">
+            <div class="shape-01"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="home-content">
+                        <h4>Vuoi fare del bene alle piante e a te stessa? Acquista su Green Symphony</h4>
+                        <h2>Benvenuto in Green Symphony</h2>
+                    </div>
+                </div>
+                <a href="#articoli" class="scroll-down">
+                    <img src="IMG/arr.png" alt="scroll down">
+                </a>
+            </div>
+        </section>
+        <!-- Home -->
+
+        <!-- Chi siamo -->
+        <section class="about-section" id="chi-siamo">
+            <div class="container">
+                <div class="row">
+                    <div class="about-img">
+                        <div class="img-box">
+                            <div class="shape-02"></div>
+                            <img src="IMG/logo.png" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <div class="row">
+                            <div class="section-title">
+                                <h1>Chi Siamo</h1>
+                                <p>Non saremo i più belli ma siamo i più verdi.
+                                    Il nostro team è composto da undici persone divise in gruppi con diversi ruoli,
+                                    che si sono impegnate nella realizzazione del progetto e che ogni giorno continuano a lavorare per poter migliorare i prodotti per le vostre case
+                                </p>
+                                <div class="stats">
+                                    <div class="row">
+                                        <div class="stat-box">
+                                            <h2>150k+</h2>
+                                            <h5>Prodotti venduti</h5>
+                                        </div>
+                                        <div class="stat-box">
+                                            <h2>2</h2>
+                                            <h5>Prodotti disponibili</h5>
+                                        </div>
+                                        <div class="stat-box">
+                                            <h2>150k+</h2>
+                                            <h5>Clienti felici</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#contatti" class="btn-01">Contattaci</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="equipe row">
+                        <h2>Equipe</h2>
+                        <br>
+                        <hr>
+                        <ul>
+                            <li>Facilitatore: Leonardo Marzano</li>
+                            <li>Sviluppo del Prodotto: Gallo Francesco, Pompilio Giuseppe, Scaramuzzi Antonio</li>
+                            <li>Sviluppo Web: Gallo Francesco, Scaramuzzi Gaia</li>
+                            <li>Advertising: D'Ambrosio Stefano, Turano Valeria</li>
+                            <li>Social Media Manager: Scaramuzzi Gaia</li>
+                            <li>Esperto Marketing: Di Tullo Francesco</li>
+                            <li>Esperto Finanza: Gagliardi Alessio</li>
+                            <li>Fotografo: Nicola Rendina</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Chi siamo -->
+
+        <!-- Articoli -->
+        <section class="prodotti-section" id="articoli">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h1>Prodotti</h1>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="service-item">
+                        <div class="service-item-inner">
+                            <img src="IMG/TECHFLORA.jpg" data-large="IMG/TECHFLORA.jpg" alt="Prodotti Completi">
+                            <div class="overlay">
+                                <h3>Tech Flora v1</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-item-inner">
+                            <img src="IMG/fai-da-te.jpeg" data-large="IMG/fai-da-te.jpeg" alt="Prodotti Fai Da Te">
+                            <div class="overlay">
+                                <h3>Tech Flora fdt1</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-item-inner">
+                            <img src="IMG/coming-soon.jpeg" data-large="IMG/coming-soon.jpeg" alt="Prodotti Fai Da Te">
+                            <div class="overlay">
+                                <h3>Prossimamente</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Articoli -->
+
+        <!-- Contatti -->
+        <section class="contact-section" id="contatti">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-img">
+                        <div class="img-box">
+                            <div class="section-title">
+                                <h1>Contattaci</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-form">
+                        <form action="action.php" class="form" method="post" name="contatto" id="for1">
+                            <div class="row">
+                                <div class="left input-group">
+                                    <label for="name-input">Name</label>
+                                    <input type="text" placeholder="Il tuo nome" class="input-control" id="name-input">
+                                </div>
+                                <div class="right input-group">
+                                    <label for="email-input">Email</label>
+                                    <input class="input-control" id="email-input" type="email" placeholder="La tua mail">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group">
+                                    <label for="message">Messaggio</label>
+                                    <textarea id="message" clas="input-control" placeholder="Il tuo messaggio"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-btn">
+                                <button type="button" class="btn-01" id="button">Invia messaggio</button>
+                            </div>
+                            <div id="dialog">
+                                Grazie per averci contattato. Ti risponderemo il prima possibile.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="recensioni-button btn-01">
+                    Recensioni
+                </div>
+                <div class="recensioni">
+                    <div class="recensione-box">
+                        <h4>Gaia</h4>
+                        <p>È un prodotto fantastico e si è rivelato molto utile, visto che mi piace viaggiare e passo a casa poco tempo. Lo ricomprerei altre cento volte e anche il prezzo è giusto.
+                            <br>Esito: positivo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Valeria</h4>
+                        <p>La pianta si sente bene, bravo vaso
+                            <br>Esito: positivo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Stefano</h4>
+                        <p>Vaso ottimo, ma avrei  aggiunto diverse fantasie, per accontentare i diversi stili
+                            <br>Esito: medio</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Francesco</h4>
+                        <p>Ho un vivaio e ho provato il vaso a casa, mi sono trovato molto bene e vorrei avere questo sistema per tutto il mio negozio.
+                            <br>Esito: positivo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Vittorio Lo Mele Boss</h4>
+                        <p>Non mi sono trovato bene, avrei preferito altre funzionalità
+                            <br>Esito: negativo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Michele Martella Boss</h4>
+                        <p>Il vaso è molto funzionale ed è anche un ottimo soprammobile, grazie a questa ho capito che la pianta va messa al sole.
+                            <br>Esito: positivo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Giuseppe Chiumento Boss</h4>
+                        <p>Non sapevo dove spendere i soldi e li ho spesi in questa cafonata, dopututto funziona bene
+                            <br>Esito: positivo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Cosma Mischitelli Boss</h4>
+                        <p>La pianta è morta dopo meno di una settimana. Questo è materiale per i colloqui.
+                            <br>Esito: negativo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Pietro Tamburrano Boss</h4>
+                        <p>Pensavo che arrivasse direttamente con la pianta, diciamo che è una mezza fregatura. Però fa il suo lavoro.
+                            <br>Esito: medio</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Giuseppe Coco Boss</h4>
+                        <p>Sconvolto, ho capito perché mi muoiono tutte le piante. NON METTEVO L'ACQUA.
+                            <br>Esito: medio</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Giovanni Savino Boss</h4>
+                        <p>Questo prodotto non è affatto male, infatti, grazie a questo ho potuto riempire la casa di piante e per la prima volta sono tutte vive. Consiglio a tutti quelli che, come me, non hanno il pollice verde di prenderlo.
+                            <br>Esito: positivo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Giuliano Pompilio Boss</h4>
+                        <p>Non lo regalerei neanche ad uno juventino. Delusione senza pannelli fotovoltaici.
+                            <br>Esito: negativo</p>
+                    </div>
+                    <hr>
+                    <div class="recensione-box">
+                        <h4>Savio Gagliardi Boss</h4>
+                        <p>Sono stato costretto a comprarlo(mio figlio ha fatto il progetto), non ho capito il funzionamento, mio figlio dice che è molto utile 
+                            <br>Esito: ma che ne so io</p>
+                    </div>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="contact-info">
+                        <div class="row">
+                            <div class="info-item">
+                                <h5>Indirizzo</h5>
+                                <p>ITET Luigi Di Maggio</p>
+                            </div>
+                            <div class="info-item">
+                                <h5>Telefono</h5>
+                                <p>012-345-6789</p>
+                            </div>
+                            <div class="info-item">
+                                <h5>Email</h5>
+                                <p>GreenSymphony11@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-link">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/green_symphony_?utm_source=qr&igsh=MWw2cGhxaXZzM2M2dg==" target="_blank" title="Instagram"><img src="IMG/insta.svg" alt="instagram icon"></a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Fraalloo/PCTO-Green_Symphony/tree/main" target="_blank" title="Instagram"><img src="IMG/github.svg"  alt="github icon"></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Contatti -->
+
+        <!-- Copyright -->
+        <p class="copyright">
+            &copy; 2024 Green Symphony
+        </p>
+        <!-- Copyright -->
+
+        <!-- Lightbox -->
+        <div class="lightbox">
+            <div class="img-box">
+                <div class="lightbox-close">&times;</div>
+                <img src="" class="lightbox-img">
+                <div class="lightbox-caption">
+                    <div class="lightbox-category"></div>
+                    <div class="lightbox-description"></div>
+                    <div class="lightbox-counter">
+                        <div class="lightbox-controls">
+                            <div class="prev">
+                                <img src="IMG/prev.svg" alt="Precedente">
+                            </div>
+                            <div class="next">
+                                <img src="IMG/next.svg" alt="Successiva">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Lightbox -->
+    </body>
+</html>
