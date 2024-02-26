@@ -1,6 +1,6 @@
 $(document).ready(function(){
     Ae()
-    
+
     // Toggle
     $(".nav-toggle").click(function(){
         $(".header .nav").slideToggle()
@@ -19,7 +19,7 @@ $(document).ready(function(){
     })
 
     // Scroll
-    $("a").on("click",function(event){
+    $("li a").on("click",function(event){
         if($(this).hash !== ""){
             event.preventDefault()
             let hash = this.hash
