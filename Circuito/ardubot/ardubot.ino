@@ -37,7 +37,7 @@ DHT dht = DHT(DHTPin, DHTTYPE);
 
 String insta = "https://www.instagram.com/green_symphony_?utm_source=qr&igsh=MWw2cGhxaXZzM2M2dg==";
 String git = "https://github.com/Fraalloo/PCTO-Green_Symphony";
-String web = "http://";
+String web = "https://fraalloo.github.io/PCTO-Green_Symphony//";
 
 void lcdStart();
 void handleNewMessagesTelegram(int);
