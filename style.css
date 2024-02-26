@@ -169,6 +169,7 @@ body{
     justify-content: center;
     transition: all 0.5s ease;
     display: none;
+    margin-right: 60px;
 }
 
 .header .fixed .nav-toggle{
@@ -250,8 +251,9 @@ body{
 
 .home-section{
     min-height: 100vh;
+    width: 100vw;
     background-image: url("IMG/sfondo.avif");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     position: relative;
     z-index: 1;
@@ -785,7 +787,6 @@ body{
     }
     .header .nav-toggle{
         display: flex;
-        margin-right: 15px;
     }
     .header .nav{
         flex: 0 0 100%;
@@ -840,6 +841,10 @@ body{
     }
     .contact-section .contact-form .form{
         padding: 55px 5px;
+    }
+    .lightbox .lightbox-img{
+        width: 400px;
+        height: 400px;
     }
 }
 
