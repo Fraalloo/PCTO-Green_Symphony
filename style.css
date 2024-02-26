@@ -786,7 +786,6 @@ body{
         position: fixed;
         background-color: #000000;
         z-index: 2;
-        padding-top: 20px;
     }
     .header .nav-toggle{
         display: flex;
